@@ -1,0 +1,90 @@
+.research {
+    &__location {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(235, 235, 235);
+
+        &--icon {
+            cursor: pointer;
+        }
+
+        &__text {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    }
+    
+    &__container {
+        display:flex;
+        height: 350px;
+        @include background;
+            &__button {
+                @include button;
+            }
+    }
+}
+.functioning {
+    @include flexMid;
+    flex-direction: column;
+    width: 100%;
+
+    &__title {
+        display:flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    &__container {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
+
+        &--button {
+            @include flexMid;
+            @include radius;
+            @include boxShadowList;
+            align-items: center;
+            height: 50px;
+            position: relative;
+            cursor:pointer;
+
+        &:hover {
+            background:rgb(255, 243, 255);
+        }
+
+        &:hover .icon-list{
+            color:#9356DC
+        }
+
+        &--list {
+            display:flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &--text {
+            font-weight: 700;
+        }
+
+            &::before {
+                content: "" counter(steps);
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                counter-increment: steps;
+                position:absolute;
+                background: $primary;
+                top: 50%;
+                bottom: 50%;
+                left: -10px;
+                transform: translateY(-50%);
+                border-radius: 16px;
+                width: 28px;
+                height: 28px;
+                color:white;
+            }
+        }
+    }
+}
