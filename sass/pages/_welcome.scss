@@ -1,8 +1,6 @@
 .research {
     &__location {
-        display:flex;
-        align-items: center;
-        justify-content: center;
+        @include flexMiddle;
         background: rgb(235, 235, 235);
 
         &--icon {
@@ -36,55 +34,50 @@
     }
 
     &__container {
-        display:flex;
-        flex-direction: column;
+        @include flexColumn;
         justify-content: space-between;
         height: 200px;
+        padding:0;
 
         &--button {
-            @include flexMid;
+            @include flexMiddle;
             @include radius;
             @include boxShadowList;
-            align-items: center;
             height: 50px;
             position: relative;
             cursor:pointer;
+            counter-increment: steps;
+            
 
         &:hover {
             background:rgb(255, 243, 255);
         }
 
         &:hover .icon-list{
-            color:#9356DC
+            color:$primary;
         }
 
         &--list {
             display:flex;
             align-items: center;
             gap: 10px;
+            font-weight:700;
         }
 
-        &--text {
-            font-weight: 700;
+        &::before {
+            content:"" counter(steps);
+            @include flexMiddle;
+            position:absolute;
+            background: $primary;
+            top: 50%;
+            bottom: 50%;
+            left: -10px;
+            transform: translateY(-50%);
+            @include radius;
+            width: 28px;
+            height: 28px;
+            color:white;
         }
-
-            &::before {
-                content: "" counter(steps);
-                display:flex;
-                justify-content: center;
-                align-items: center;
-                counter-increment: steps;
-                position:absolute;
-                background: $primary;
-                top: 50%;
-                bottom: 50%;
-                left: -10px;
-                transform: translateY(-50%);
-                border-radius: 16px;
-                width: 28px;
-                height: 28px;
-                color:white;
-            }
         }
     }
-}
+} 
