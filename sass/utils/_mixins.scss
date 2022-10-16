@@ -38,3 +38,6 @@
 @mixin radius {
     border-radius: 20px;
 }
+@mixin container {
+    padding: 0 15px;
+}

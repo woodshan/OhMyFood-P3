@@ -14,18 +14,21 @@
     }
     
     &__container {
-        display:flex;
+        @include flexColumn;
+        align-items: center;
         height: 350px;
         @include background;
+        @include container;
             &__button {
                 @include button;
+                @include flexMiddle;
             }
     }
 }
 .functioning {
     @include flexMid;
     flex-direction: column;
-    width: 100%;
+    @include container;
 
     &__title {
         display:flex;
@@ -36,14 +39,14 @@
     &__container {
         @include flexColumn;
         justify-content: space-between;
-        height: 200px;
+        height: 240px;
         padding:0;
 
         &--button {
             @include flexMiddle;
             @include radius;
             @include boxShadowList;
-            height: 50px;
+            height: 60px;
             position: relative;
             cursor:pointer;
             counter-increment: steps;
@@ -81,3 +84,18 @@
         }
     }
 } 
+// RESTAURANT SECTION
+.restaurant__container
+{
+    @include flexColumn;
+    @include container;
+
+    &__card {
+        @include flexColumn;
+        @include boxShadowList;
+
+        &--img {
+            height: 180px;
+        }
+    }
+}
