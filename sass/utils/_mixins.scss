@@ -21,9 +21,6 @@
     color:white;
     cursor:pointer;
     text-shadow: -1px 2px 2px rgba(255, 255, 255, 0.225);
-    @include boxShadow;
-}
-@mixin boxShadow {
     box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.24);
     -webkit-box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.24);
     -moz-box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.24);
@@ -35,9 +32,9 @@
 @mixin background {
     background-color:rgb(245, 245, 245)
 }
-@mixin radius {
+@mixin borderRadius {
     border-radius: 20px;
 }
 @mixin container {
-    padding: 0 15px;
+    padding: 0 25px;
 }

@@ -13,19 +13,19 @@
 <body>
 <!-- HEADER -->
     <header class="header">
-        <img src="../images/logo/ohmyfood.png" class="header__logo">
+        <img src="../images/logo/ohmyfood.png" alt="Logo" class="header__logo">
     </header>
 <!-- RESEARCH SECTION -->
     <main>
         <div class="research">
             <div class="research__location">
-                <i class="fa-solid fa-location-dot research__location--icon"></i>
-                <p class="research__location__text">Paris, Belleville</p>
+                <i class="fa-solid fa-location-dot research__icon"></i>
+                <p class="research__text">Paris, Belleville</p>
             </div>
             <div class="research__container">
                 <h1 class="title">Réservez le menu qui vous convient</h1>
                 <p class="text">Découvrez des restaurants d'exception, séléctionné par nos soins.</p>
-                <div class="research__container__button">
+                <div class="research__button">
                     <p>Explorer nos restaurants</p>
                 </div>
             </div>
@@ -38,32 +38,76 @@
                 </div>
                 <div>
                     <ol class="functioning__container">
-                        <li class="functioning__container--button">
-                            <div><a class="functioning__container--button--list"><i class="fa-solid fa-mobile-screen-button icon-list"></i>Choisissez un restaurant</a></div>
+                        <li class="functioning__button">
+                            <div><a class="functioning__list"><i class="fa-solid fa-mobile-screen-button icon-list"></i>Choisissez un restaurant</a></div>
                         </li>
-                        <li class="functioning__container--button">
-                            <div><a class="functioning__container--button--list"><i class="fa-solid fa-list icon-list"></i>Composez votre menu</a></div>
+                        <li class="functioning__button">
+                            <div><a class="functioning__list"><i class="fa-solid fa-list icon-list"></i>Composez votre menu</a></div>
                         </li>
-                        <li class="functioning__container--button">
-                            <div><a class="functioning__container--button--list"><i class="fa-solid fa-store icon-list"></i>Dégustez au restaurant</a></div>
+                        <li class="functioning__button">
+                            <div><a class="functioning__list"><i class="fa-solid fa-store icon-list"></i>Dégustez au restaurant</a></div>
                         </li>
                     </ol>
                 </div>
             </section>
+<!-- RESTAURANT SECTION -->
         <section class="restaurant">
             <div class="restaurant__title">
                 <h2 class="title">Restaurants</h2>
             </div>
             <div class="restaurant__container">
-                <div class="restaurant__container__card">
-                    <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class="restaurant__container__card--img">
-                    <div>
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
+                <a href="#">
+                    <div class="restaurant__card restaurant__card--new">
+                        <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class="restaurant__img">
+                        <div class="restaurant__description">
+                            <h3 class="restaurant__text">La palette du goût</h3>
+                            <p class="restaurant__text">Ménilmontant</p>
+                            <i class="fa-solid fa-heart restaurant__heart restaurant__heart--hover"></i>
+                            <i class="fa-regular fa-heart restaurant__heart"></i>
+                        </div>
                     </div>
+                </a>
+                <a href="#">
+                    <div class="restaurant__card restaurant__card--new">
+                        <img src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" class="restaurant__img">
+                        <div class="restaurant__description">
+                            <h3 class="restaurant__text">La palette du goût</h3>
+                            <p class="restaurant__text">Ménilmontant</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="restaurant__card">
+                        <img src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française" class="restaurant__img">
+                        <div class="restaurant__description">
+                            <h3 class="restaurant__text">La palette du goût</h3>
+                            <p class="restaurant__text">Ménilmontant</p>
+                        </div>
                 </div>
+                </a>
+                <a href="#">
+                    <div class="restaurant__card">
+                        <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens" class="restaurant__img">
+                        <div class="restaurant__description">
+                            <h3 class="restaurant__text">La palette du goût</h3>
+                            <p class="restaurant__text">Ménilmontant</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
+<!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+            <img src="../images/logo/ohmyfood@2x.svg" alt="Logo" class="footer__logo">
+            <ul class="footer__ul">
+                <li class="footer__li"><a href="#" class="footer__text"><i class="fa-solid fa-utensils footer__icon"></i>Proposer un restaurant</a></li>
+                <li class="footer__li"><a href="#" class="footer__text"><i class="fa-solid fa-handshake-angle footer__icon"></i>Devenir partenaire</a></li>
+                <li class="footer__li"><a href="#" class="footer__text">Mentions légales</a></li>
+                <li class="footer__li"><a href="#" class="footer__text">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

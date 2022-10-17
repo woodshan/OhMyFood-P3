@@ -8,3 +8,28 @@
         width: 200px;
     }
 }
+// FOOTER
+.footer {
+    background:rgb(70, 70, 70);
+    
+    &__container {
+        @include container;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__ul {
+        @include flexColumn;
+        justify-content: space-between;
+        height: 90px;
+        margin: 15px 0 0 0;
+    }
+
+    &__text {
+        color:white;
+    }
+
+    &__icon {
+        margin-right: 5px;
+    }
+}

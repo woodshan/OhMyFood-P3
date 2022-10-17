@@ -1,11 +1,20 @@
 body {
   font-family: "Roboto", sans-serif;
-  margin: 20px auto auto auto;
+  margin: 20px auto 0 auto;
   padding: 0;
 }
 
 li {
   list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .title {
@@ -37,16 +46,38 @@ img {
   width: 200px;
 }
 
+.footer {
+  background: rgb(70, 70, 70);
+}
+.footer__container {
+  padding: 0 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer__ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90px;
+  margin: 15px 0 0 0;
+}
+.footer__text {
+  color: white;
+}
+.footer__icon {
+  margin-right: 5px;
+}
+
 .research__location {
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgb(235, 235, 235);
 }
-.research__location--icon {
+.research__icon {
   cursor: pointer;
 }
-.research__location__text {
+.research__text {
   margin-left: 10px;
   font-weight: bold;
 }
@@ -54,11 +85,12 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 350px;
   background-color: rgb(245, 245, 245);
-  padding: 0 15px;
+  padding: 0 25px;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
-.research__container__button {
+.research__button {
   background: #9356DC;
   background: linear-gradient(344deg, #9356DC 0%, #FF79DA 80%);
   background: -webkit-linear-gradient(344deg, #9356DC 0%, #FF79DA 80%);
@@ -80,12 +112,12 @@ img {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 0 15px;
+  padding: 0 25px;
+  padding-bottom: 40px;
 }
 .functioning__title {
   display: flex;
   justify-content: flex-start;
-  width: 100%;
 }
 .functioning__container {
   display: flex;
@@ -94,7 +126,7 @@ img {
   height: 240px;
   padding: 0;
 }
-.functioning__container--button {
+.functioning__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,19 +138,19 @@ img {
   cursor: pointer;
   counter-increment: steps;
 }
-.functioning__container--button:hover {
+.functioning__button:hover {
   background: rgb(255, 243, 255);
 }
-.functioning__container--button:hover .icon-list {
+.functioning__button:hover .icon-list {
   color: #9356DC;
 }
-.functioning__container--button--list {
+.functioning__list {
   display: flex;
   align-items: center;
   gap: 10px;
   font-weight: 700;
 }
-.functioning__container--button::before {
+.functioning__list::before {
   content: "" counter(steps);
   display: flex;
   justify-content: center;
@@ -133,21 +165,64 @@ img {
   width: 28px;
   height: 28px;
   color: white;
+  font-weight: normal;
 }
 
+.restaurant {
+  background-color: rgb(245, 245, 245);
+  padding: 0 25px;
+  height: 1180px;
+  padding-bottom: 60px;
+  padding-top: 15px;
+}
+.restaurant__title {
+  display: flex;
+  justify-content: flex-start;
+}
 .restaurant__container {
   display: flex;
   flex-direction: column;
-  padding: 0 15px;
+  justify-content: space-between;
+  height: 92%;
 }
-.restaurant__container__card {
+.restaurant__card {
   display: flex;
   flex-direction: column;
   -webkit-box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  position: relative;
 }
-.restaurant__container__card--img {
+.restaurant__card--new::before {
+  position: absolute;
+  content: "Nouveau";
+  padding: 5px 10px;
+  background-color: #99E2D0;
+  color: #3f554f;
+  right: 3%;
+  top: 5%;
+}
+.restaurant__img {
   height: 180px;
+  border-radius: 20px 20px 0 0;
+}
+.restaurant__description {
+  padding: 10px;
+  position: relative;
+}
+.restaurant__text {
+  margin: 0;
+  padding: 3px;
+}
+.restaurant__heart {
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  font-size: 20px;
+  cursor: pointer;
+}
+.restaurant__heart--hover:hover {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */
