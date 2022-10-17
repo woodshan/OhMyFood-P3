@@ -103,8 +103,14 @@
 
     &__container {
         @include flexColumn;
-        justify-content: space-between;
+        gap: 25px;
         height: 92%;
+    }
+
+    &--separator {
+        height:100%;
+        @include flexColumn;
+        justify-content: space-between;
     }
 
     &__card {
@@ -154,4 +160,54 @@
         }
     }
 }
+// TABLETTE
+@media screen and (min-width: 768px) {
+    // FOOTER
+    .footer { 
+        
+        &__container {
+        text-align:center;
+        }
+        &__logo {
+            margin-left: 13px;
+        }
+    }
+}
+// DESKTOP
+@media screen and (min-width: 992px) {
+    // FUNCTIONING SECTION
+    .functioning {
+        
+        &__container {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            height: auto;
+        }
 
+        &__button {
+            width: 25%;
+        }
+    }
+    // RESTAURANT 
+    .restaurant {
+        height: auto; 
+
+        &__container {
+            flex-direction:row;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        &--separator {
+            flex-direction: row;
+            flex-wrap:wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        &__img--resize {
+            width: 269.97px;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+// HEADERS
+.headers {
+    display:flex;
+    align-items: center;
+    padding-bottom: 15px;
+
+    &__arrow {
+        @include container;
+        
+    }
+
+    &__icon {
+        font-size: 20px;
+    }
+
+    &__logo {
+        width: 100%;
+        justify-content: center;
+        display:flex;
+        margin-right: 20px;
+    }
+}
+// MENU SECTION
+.menu {
+    
+
+    &__background {
+        height: 330px;
+        width: 100%;
+        z-index: -1;
+        position:relative;
+    }
+
+    &__container {
+        border-radius: 40px;
+        background-color:white;
+        width: 100%;
+        position:absolute;
+        bottom: 10%;
+        top: 40%;
+    }
+
+    &__title {
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+// STARTER
+.starter {
+    @include flexColumn;
+    gap: 20px;
+    @include container;
+
+    &__title {
+
+        position:relative;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 20px;
+        margin-bottom: 0;
+
+        &::before {
+            content:"";
+            height: 3px;
+            width: 45px;
+            background-color: $tertiaire;
+            position:absolute;
+            bottom: 0;
+        }
+    }
+
+    &__card {
+        display:flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0 15px;
+        @include boxShadowList;
+        @include borderRadius;
+        cursor: pointer;
+        position:relative;
+
+        &::after {
+            content: "";
+            background-color: $tertiaire;
+            height: 100%;
+            width: 10%;
+            right: 0;
+            position:absolute;
+            border-radius: 0 18px 18px 0;
+            transition: 0.4s;
+        }
+
+    }
+
+    &__menu {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    &__details {
+        margin-top: 5px;
+    }
+
+    &__euros {
+        font-weight: 700;
+        color:rgb(56, 56, 56);
+    }
+
+    &__check {
+        position: absolute;
+        bottom: 65%;
+        top: 35%;
+        right: 3%;
+        font-size: 25px;
+        color:grey;
+    }
+
+    &__icon {
+        display:none;
+    }
+}
+
+  
