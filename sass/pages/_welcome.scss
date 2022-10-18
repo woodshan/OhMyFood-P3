@@ -149,9 +149,7 @@
     &__hearts {
 
         &:hover > .restaurant__heart--hover{
-            background: linear-gradient(344deg,$primary 0%, $secondary 80%);
-            background-clip: text;
-            -webkit-background-clip: text;
+            @include animHeart;
         }
 
         &:hover > .restaurant__heart--btn {
@@ -224,3 +222,5 @@
         }
     }
 }
+
+  

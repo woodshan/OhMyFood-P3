@@ -222,6 +222,8 @@ img {
   padding: 3px;
 }
 .restaurant__hearts:hover > .restaurant__heart--hover {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   background: linear-gradient(344deg, #9356DC 0%, #FF79DA 80%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -306,14 +308,35 @@ img {
 .menu__title {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   border-radius: 40px 40px 0 0;
   background-color: white;
   position: absolute;
   width: 100%;
 }
-.menu__heart:hover {
-  color: #9356DC;
+.menu__restaurant {
+  padding: 0 20px;
+}
+.menu__hearts:hover > .menu__heart--hover {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  background: linear-gradient(344deg, #9356DC 0%, #FF79DA 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.menu__hearts:hover > .menu__heart--btn {
+  color: rgba(146, 86, 220, 0);
+}
+.menu__heart {
+  position: absolute;
+  font-size: 30px;
+  right: 5%;
+  top: 30px;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.menu__heart--hover {
+  color: rgba(146, 86, 220, 0);
 }
 
 .starter {
@@ -349,6 +372,22 @@ img {
   border-radius: 20px;
   cursor: pointer;
 }
+.starter__card:hover .starter__icon::before {
+  width: 100%;
+  right: 0;
+}
+.starter__card:hover .starter__check {
+  animation: rotate-center 0.6s ease-in-out both;
+  right: 40%;
+  opacity: 1;
+}
+.starter__dish {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: -30px;
+}
 .starter__menu {
   font-size: 20px;
   margin-bottom: 0;
@@ -365,21 +404,76 @@ img {
   width: 10%;
   height: 84px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  overflow: hidden;
+  right: 0;
 }
 .starter__icon::before {
   content: "";
   background-color: #99E2D0;
   height: 100%;
-  width: 100%;
+  width: 0%;
+  right: 0;
   position: absolute;
   border-radius: 0 18px 18px 0;
-  z-index: -1;
+  transition: all 0.5s ease-in-out;
 }
 .starter__check {
   font-size: 25px;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  transition: right 0.6s ease-in-out;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+}
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
