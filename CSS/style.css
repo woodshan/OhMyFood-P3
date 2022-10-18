@@ -137,6 +137,7 @@ img {
   position: relative;
   cursor: pointer;
   counter-increment: steps;
+  transition: all 0.4s;
 }
 .functioning__button:hover {
   background: rgb(255, 243, 255);
@@ -220,15 +221,24 @@ img {
   margin: 0;
   padding: 3px;
 }
+.restaurant__hearts:hover > .restaurant__heart--hover {
+  background: linear-gradient(344deg, #9356DC 0%, #FF79DA 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.restaurant__hearts:hover > .restaurant__heart--btn {
+  color: rgba(146, 86, 220, 0);
+}
 .restaurant__heart {
   position: absolute;
   right: 5%;
   top: 30%;
   font-size: 20px;
   cursor: pointer;
+  transition: all 0.4s ease-out;
 }
-.restaurant__heart--hover:hover {
-  color: #9356DC;
+.restaurant__heart--hover {
+  color: rgba(146, 86, 220, 0);
 }
 
 @media screen and (min-width: 768px) {
@@ -285,24 +295,25 @@ img {
   margin-right: 20px;
 }
 
+.menu {
+  position: relative;
+}
 .menu__background {
   height: 330px;
   width: 100%;
-  z-index: -1;
-  position: relative;
-}
-.menu__container {
-  border-radius: 40px;
-  background-color: white;
-  width: 100%;
-  position: absolute;
-  bottom: 10%;
-  top: 40%;
+  margin-bottom: -80px;
 }
 .menu__title {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  border-radius: 40px 40px 0 0;
+  background-color: white;
+  position: absolute;
+  width: 100%;
+}
+.menu__heart:hover {
+  color: #9356DC;
 }
 
 .starter {
@@ -318,6 +329,7 @@ img {
   font-weight: normal;
   font-size: 20px;
   margin-bottom: 0;
+  margin-top: 100px;
 }
 .starter__title::before {
   content: "";
@@ -331,22 +343,11 @@ img {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 0 0 0 15px;
   -webkit-box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   cursor: pointer;
-  position: relative;
-}
-.starter__card::after {
-  content: "";
-  background-color: #99E2D0;
-  height: 100%;
-  width: 10%;
-  right: 0;
-  position: absolute;
-  border-radius: 0 18px 18px 0;
-  transition: 0.4s;
 }
 .starter__menu {
   font-size: 20px;
@@ -359,16 +360,26 @@ img {
   font-weight: 700;
   color: rgb(56, 56, 56);
 }
-.starter__check {
-  position: absolute;
-  bottom: 65%;
-  top: 35%;
-  right: 3%;
-  font-size: 25px;
-  color: grey;
-}
 .starter__icon {
-  display: none;
+  position: relative;
+  width: 10%;
+  height: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.starter__icon::before {
+  content: "";
+  background-color: #99E2D0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 0 18px 18px 0;
+  z-index: -1;
+}
+.starter__check {
+  font-size: 25px;
+  color: rgb(255, 255, 255);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -55,6 +55,7 @@
     position: relative;
     cursor:pointer;
     counter-increment: steps;
+    transition: all 0.4s;
     
         &:hover {
             background:rgb(255, 243, 255);
@@ -145,19 +146,31 @@
         padding:3px;
     }
 
+    &__hearts {
+
+        &:hover > .restaurant__heart--hover{
+            background: linear-gradient(344deg,$primary 0%, $secondary 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+        &:hover > .restaurant__heart--btn {
+            color:$btn-heart;
+        }
+    }
+
     &__heart {
         position: absolute;
         right: 5%;
         top: 30%;
         font-size: 20px;
         cursor:pointer;
+        transition: all 0.4s ease-out;
 
         &--hover {
-           
-            &:hover {
-                color: $primary;
-            }
+            color: $btn-heart;
         }
+
     }
 }
 // TABLETTE
