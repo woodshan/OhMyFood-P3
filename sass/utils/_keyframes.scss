@@ -19,15 +19,6 @@
     }
 }
 
-  @keyframes rotate-center{
-    0% {
-        transform:rotate(0)
-    }
-    100% {
-        transform:rotate(360deg)
-    }
-}
-
 @-webkit-keyframes slide-bottom {
     0% {
       -webkit-transform: translateY(0);
