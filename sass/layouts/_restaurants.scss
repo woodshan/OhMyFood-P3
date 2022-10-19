@@ -17,7 +17,7 @@
         width: 100%;
         justify-content: center;
         display:flex;
-        margin-right: 20px;
+        margin-right: 60px;
     }
 }
 // MENU SECTION
@@ -76,9 +76,7 @@
 }
 // STARTER
 .starter {
-    @include flexColumn;
-    gap: 20px;
-    @include container;
+    @include menuDisplay;
 
     &__title {
         @include menuTitle;
@@ -111,7 +109,7 @@
     }
 
     &__dish {
-        @include menuDish
+        @include menuContainer;
     }
 
     &__menu {
@@ -120,7 +118,6 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
 
     &__description {
         white-space: nowrap;
@@ -139,21 +136,147 @@
     }
 
     &__icon {
-        position:relative;
-        width: 20%;
-        height: 84px;
-        @include flexMiddle;
-        background-color: $tertiaire;
-        border-radius: 0 18px 18px 0;
-        transition: all 0.6s ease-in-out;
-        margin-right: -20%;
+        @include menuIcon;
     }
 
     &__check {
-        font-size: 25px;
-        color:rgb(255, 255, 255);
-        transition: all 0.9s ease-in-out;
-        position:absolute;
-        margin-right:-100%;
+        @include menuCheck;
+    }
+}
+
+// DISH SECTION
+.dish {
+    @extend .starter;
+
+    &__title {
+        @extend .starter__title;
+        margin-top: 50px;
+
+        &::before {
+            @include menuUnderline;
+        }
+    }
+
+    &__card {
+        @extend .starter__card;
+
+        &--delay1 {
+            @extend .starter__card--delay1;
+        }
+
+        &--delay2 {
+            @extend .starter__card--delay2;
+        }
+
+        &:hover .dish__icon {
+            margin-right:0;
+        }
+
+        &:hover .dish__check {
+            transform: rotate(360deg);
+            margin-right:0;
+        }
+    }
+
+    &__container {
+        @extend .starter__dish;
+    }
+
+    &__description {
+        @extend .starter__description;
+    }
+
+    &__menu {
+        @extend .starter__menu;
+    }
+
+    &__details {
+        @extend .starter__details;
+    }
+
+    &__euros {
+        @extend .starter__euros;
+    }
+
+    &__icon {
+        @extend .starter__icon;
+    }
+
+    &__check {
+        @extend .starter__check;
+    }
+}
+
+// DESSERT SECTIONS 
+.dessert {
+    @extend .starter;
+
+    &__title {
+        @extend .starter__title;
+        margin-top: 50px;
+
+        &::before {
+            @include menuUnderline;
+        }
+    }
+
+    &__card {
+        @extend .starter__card;
+
+        &--delay1 {
+            @extend .starter__card--delay1;
+        }
+
+        &--delay2 {
+            @extend .starter__card--delay2;
+        }
+
+        &:hover .dish__icon {
+            margin-right:0;
+        }
+
+        &:hover .dish__check {
+            transform: rotate(360deg);
+            margin-right:0;
+        }
+    }
+
+    &__container {
+        @extend .starter__dish;
+    }
+
+    &__description {
+        @extend .starter__description;
+    }
+
+    &__menu {
+        @extend .starter__menu;
+    }
+
+    &__details {
+        @extend .starter__details;
+    }
+
+    &__euros {
+        @extend .starter__euros;
+    }
+
+    &__icon {
+        @extend .starter__icon;
+    }
+
+    &__check {
+        @extend .starter__check;
+    }
+}
+
+// ORDER BUTTON 
+.order {
+    margin: 50px 0;
+
+    &__button {
+        @extend .research__button;
+        width: 40%;
+        margin: auto;
     }
 }

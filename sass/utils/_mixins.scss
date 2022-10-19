@@ -91,7 +91,7 @@
     @include borderRadius;
     @include animFade;
 }
-@mixin menuDish {
+@mixin menuContainer {
     display:flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -99,4 +99,21 @@
     padding-right: 15px;
     white-space: nowrap;
     overflow: hidden;
+}
+@mixin menuIcon {
+    position:relative;
+    width: 20%;
+    height: 84px;
+    @include flexMiddle;
+    background-color: $tertiaire;
+    border-radius: 0 18px 18px 0;
+    transition: all 0.6s ease-in-out;
+    margin-right: -20%;
+}
+@mixin menuCheck {
+    font-size: 25px;
+    color:rgb(255, 255, 255);
+    transition: all 0.9s ease-in-out;
+    position:absolute;
+    margin-right:-100%;
 }

@@ -65,6 +65,30 @@
     }
   }
   
+  @keyframes spin {
+    0% { 
+        visibility:visible;
+        opacity:1;
+        transform: rotate(0deg); 
+    }
+    100% { 
+        transform: rotate(360deg);
+        opacity:80%; 
+        visibility:hidden;
+    }
+  }
+  
+  @keyframes loader {
+    0% {
+      visibility: visible;
+      opacity:1;
+    }
+    100% {
+      visibility:hidden; 
+      opacity:90%;
+    }
+  }
+ 
   
  
   
