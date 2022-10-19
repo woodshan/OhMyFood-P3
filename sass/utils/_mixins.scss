@@ -13,17 +13,17 @@
 }
 @mixin button {
     background: $primary;
-    background: linear-gradient(344deg,$primary 0%, $secondary 80%);
-    background: -webkit-linear-gradient(344deg,$primary 0%, $secondary 80%);
-    background: -moz-linear-gradient(344deg,$primary 0%, $secondary 80%);
+    background: linear-gradient($secondary, $primary);
+    background: -webkit-linear-gradient($secondary, $primary);
+    background: -moz-linear-gradient($secondary, $primary);
     border-radius: 30px;
     padding: 0 20px;
     color:white;
     cursor:pointer;
     text-shadow: -1px 2px 2px rgba(255, 255, 255, 0.225);
-    box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.24);
-    -webkit-box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.24);
-    -moz-box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.24);
+    box-shadow: 0px 0px 17px -8px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 0px 0px 17px -8px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 0px 17px -8px rgba(0,0,0,0.24);
 }
 @mixin boxShadowList {
     -webkit-box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.3); 
@@ -41,7 +41,7 @@
 @mixin animHeart {
     -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    background: linear-gradient(344deg,$primary 0%, $secondary 80%);
+    background: linear-gradient($secondary, $primary);
     background-clip: text;
     -webkit-background-clip: text;
 }
@@ -113,7 +113,6 @@
 @mixin menuCheck {
     font-size: 25px;
     color:rgb(255, 255, 255);
-    transition: all 0.9s ease-in-out;
+    transition: all 1s ease-in-out;
     position:absolute;
-    margin-right:-100%;
 }

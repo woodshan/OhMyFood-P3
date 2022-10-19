@@ -52,6 +52,7 @@ img {
 
 .footer {
   background: rgb(70, 70, 70);
+  height: 100%;
 }
 .footer__container {
   padding: 0 20px;
@@ -99,20 +100,25 @@ img {
 }
 .research__button, .order__button {
   background: #9356DC;
-  background: linear-gradient(344deg, #9356DC 0%, #FF79DA 80%);
-  background: -webkit-linear-gradient(344deg, #9356DC 0%, #FF79DA 80%);
-  background: -moz-linear-gradient(344deg, #9356DC 0%, #FF79DA 80%);
+  background: linear-gradient(#FF79DA, #9356DC);
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  background: -moz-linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
   padding: 0 20px;
   color: white;
   cursor: pointer;
   text-shadow: -1px 2px 2px rgba(255, 255, 255, 0.225);
-  box-shadow: 10px 10px 17px -8px rgba(0, 0, 0, 0.24);
-  -webkit-box-shadow: 10px 10px 17px -8px rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 10px 10px 17px -8px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 0px 17px -8px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0px 0px 17px -8px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 0px 17px -8px rgba(0, 0, 0, 0.24);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+.research__button:hover, .order__button:hover {
+  background: linear-gradient(rgba(255, 121, 217, 0.9568627451), rgba(146, 86, 220, 0.9490196078));
+  box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.24);
 }
 
 .functioning {
@@ -207,15 +213,20 @@ img {
   box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+.restaurant__card:hover {
+  transform: scale(1.01);
 }
 .restaurant__card--new::before {
   position: absolute;
   content: "Nouveau";
   padding: 5px 10px;
   background-color: #99E2D0;
-  color: #3f554f;
+  color: #048c68;
   right: 3%;
   top: 5%;
+  font-weight: 600;
 }
 .restaurant__img {
   height: 180px;
@@ -233,7 +244,7 @@ img {
 .restaurant__hearts:hover > .restaurant__heart--hover {
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  background: linear-gradient(344deg, #9356DC 0%, #FF79DA 80%);
+  background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -288,32 +299,6 @@ img {
     width: 269.97px;
   }
 }
-.loader {
-  border: 16px solid #FF79DA;
-  border-top: 16px solid #9356DC;
-  border-left: 16px solid #99E2D0;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 5s linear;
-  visibility: hidden;
-  position: fixed;
-}
-
-.loader__container {
-  background-color: white;
-  height: 123vh;
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: wait;
-  animation: loader 5s linear;
-  visibility: hidden;
-}
-
 .headers {
   display: flex;
   align-items: center;
@@ -321,6 +306,7 @@ img {
 }
 .headers__arrow {
   padding: 0 20px;
+  margin-top: 15px;
 }
 .headers__icon {
   font-size: 20px;
@@ -359,7 +345,7 @@ img {
 .menu__hearts:hover > .menu__heart--hover {
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  background: linear-gradient(344deg, #9356DC 0%, #FF79DA 80%);
+  background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -422,7 +408,6 @@ img {
 }
 .starter__card:hover .starter__check, .starter__card:hover .dessert__check, .dessert__card:hover .starter__check, .dessert__card:hover .dessert__check, .starter__card:hover .dish__check, .dessert__card:hover .dish__check, .dish__card:hover .starter__check, .dish__card:hover .dessert__check, .dish__card:hover .dish__check {
   transform: rotate(360deg);
-  margin-right: 0;
 }
 .starter__card--delay1, .dessert__card--delay1, .dish__card--delay1 {
   -webkit-animation: fade-in-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s both;
@@ -475,9 +460,8 @@ img {
 .starter__check, .dessert__check, .dish__check {
   font-size: 25px;
   color: rgb(255, 255, 255);
-  transition: all 0.9s ease-in-out;
+  transition: all 1s ease-in-out;
   position: absolute;
-  margin-right: -100%;
 }
 
 .dish__title {

@@ -6,7 +6,7 @@
 
     &__arrow {
         @include container;
-        
+        margin-top: 15px;
     }
 
     &__icon {
@@ -96,7 +96,6 @@
 
         &:hover .starter__check {
             transform: rotate(360deg);
-            margin-right:0;
         }
 
         &--delay1 {
