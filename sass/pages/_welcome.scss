@@ -67,11 +67,11 @@
     counter-increment: steps;
     transition: all 0.4s;
     
-        &:hover {
+        &:active {
             background:rgb(255, 243, 255);
         }
 
-        &:hover .icon-list{
+        &:active .icon-list{
             color:$primary;
         }
     }
@@ -166,11 +166,11 @@
 
     &__hearts {
 
-        &:hover > .restaurant__heart--hover{
+        &:active > .restaurant__heart--hover{
             @include animHeart;
         }
 
-        &:hover > .restaurant__heart--btn {
+        &:active > .restaurant__heart--btn {
             color:$btn-heart;
         }
     }
@@ -241,4 +241,9 @@
     }
 }
 
-  
+span {
+    color:$primary;
+    font-family: "Shrikhand";
+    margin-top: 180px;
+    font-size: 20px;
+}

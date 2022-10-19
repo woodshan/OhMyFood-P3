@@ -183,10 +183,10 @@ img {
   counter-increment: steps;
   transition: all 0.4s;
 }
-.functioning__button:hover {
+.functioning__button:active {
   background: rgb(255, 243, 255);
 }
-.functioning__button:hover .icon-list {
+.functioning__button:active .icon-list {
   color: #9356DC;
 }
 .functioning__list {
@@ -272,14 +272,14 @@ img {
   margin: 0;
   padding: 3px;
 }
-.restaurant__hearts:hover > .restaurant__heart--hover {
+.restaurant__hearts:active > .restaurant__heart--hover {
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
 }
-.restaurant__hearts:hover > .restaurant__heart--btn {
+.restaurant__hearts:active > .restaurant__heart--btn {
   color: rgba(146, 86, 220, 0);
 }
 .restaurant__heart {
@@ -330,6 +330,13 @@ img {
     width: 269.97px;
   }
 }
+span {
+  color: #9356DC;
+  font-family: "Shrikhand";
+  margin-top: 180px;
+  font-size: 20px;
+}
+
 .headers {
   display: flex;
   align-items: center;
