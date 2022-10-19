@@ -62,8 +62,6 @@
     &__heart {
         @include container;
         font-size: 25px;
-        right: 5%;
-        top: 32px;
         cursor:pointer;
         transition: all 0.4s ease-out;
         &--hover {
@@ -277,5 +275,45 @@
         @extend .research__button;
         width: 40%;
         margin: auto;
+    }
+}
+
+// MEDIA QUERIES TABLETTE
+@media screen and (min-width: 768px) {
+    .menu {
+        &__restaurant {
+            font-size: 30px;
+        }
+    }
+
+    .order {
+        &__button {
+            width: 20%;
+        }
+
+        &__text {
+            font-size: 20px;
+        }
+    }
+}
+
+// MEDIA QUERIES DESKTOP
+@media screen and (min-width: 992px) {
+    .starter {
+        &__card {
+            width: 80%;
+            margin: auto;
+        }
+
+        &__title {
+            width: 85%;
+            margin-left: auto;
+            margin-right:auto;
+        }
+    }
+    .order {
+        &__button {
+            width: 15%;
+        }
     }
 }

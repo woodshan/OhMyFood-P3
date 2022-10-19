@@ -22,7 +22,7 @@ a {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -38,6 +38,31 @@ a {
 
 img {
   object-fit: cover;
+}
+
+.loader {
+  background-color: white;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: wait;
+  animation: loader 3s linear;
+  visibility: hidden;
+}
+.loader__content {
+  border: 16px solid #FF79DA;
+  border-top: 16px solid #9356DC;
+  border-left: 16px solid #99E2D0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 3s linear;
+  visibility: hidden;
+  position: fixed;
 }
 
 .header {
@@ -73,6 +98,12 @@ img {
   margin-right: 5px;
 }
 
+@media screen and (min-width: 992px) {
+  .loader__content {
+    width: 120px;
+    height: 120px;
+  }
+}
 .research__location {
   display: flex;
   justify-content: center;
@@ -355,8 +386,6 @@ img {
 .menu__heart {
   padding: 0 20px;
   font-size: 25px;
-  right: 5%;
-  top: 32px;
   cursor: pointer;
   transition: all 0.4s ease-out;
 }
@@ -508,6 +537,31 @@ img {
   margin: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .menu__restaurant {
+    font-size: 30px;
+  }
+  .order__button {
+    width: 20%;
+  }
+  .order__text {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .starter__card, .dish__card, .dessert__card {
+    width: 80%;
+    margin: auto;
+  }
+  .starter__title, .dish__title, .dessert__title {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .order__button {
+    width: 15%;
+  }
+}
 @-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);

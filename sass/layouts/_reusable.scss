@@ -1,3 +1,11 @@
+// PAGE LOADER
+.loader {
+    @include Pageloader;
+    
+    &__content {
+        @include loader;
+  }
+}
 // HEADER
 .header {
     @include flexMid;
@@ -32,5 +40,12 @@
 
     &__icon {
         margin-right: 5px;
+    }
+}
+// MEDIA QUERIES TABLETTE 
+@media screen and (min-width:992px) {
+    .loader__content {
+        width: 120px;
+        height:120px;
     }
 }
