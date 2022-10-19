@@ -54,8 +54,8 @@ img {
   visibility: hidden;
 }
 .loader__content {
-  border: 16px solid #FF79DA;
-  border-top: 16px solid #9356DC;
+  border: 16px solid #9356DC;
+  border-top: 16px solid #FF79DA;
   border-left: 16px solid #99E2D0;
   border-radius: 50%;
   width: 60px;

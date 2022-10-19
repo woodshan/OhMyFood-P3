@@ -132,8 +132,8 @@
     visibility: hidden;
 }
 @mixin loader {
-    border: 16px solid $secondary;
-    border-top: 16px solid $primary;
+    border: 16px solid $primary;
+    border-top: 16px solid $secondary;
     border-left: 16px solid $tertiaire;
     border-radius: 50%;
     width: 60px;
