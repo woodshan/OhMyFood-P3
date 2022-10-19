@@ -45,3 +45,58 @@
     background-clip: text;
     -webkit-background-clip: text;
 }
+@mixin animFade {
+    -webkit-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+	animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+}
+@mixin animFadedelay1 {
+    -webkit-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
+	animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
+}
+@mixin animFadedelay2 {
+    -webkit-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s both;
+	animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s both;
+}
+
+// MENUS
+@mixin menuDisplay {
+    @include flexColumn;
+    @include container;
+    gap:20px;
+}
+@mixin menuTitle {
+    position:relative;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+@mixin menuUnderline {
+    content:"";
+    height: 3px;
+    width: 45px;
+    background-color: $tertiaire;
+    position:absolute;
+    bottom: 0;
+}
+@mixin menuCard {
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 0 0 15px;
+    cursor: pointer;
+    overflow:hidden;
+    @include boxShadowList;
+    @include borderRadius;
+    @include animFade;
+}
+@mixin menuDish {
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+}

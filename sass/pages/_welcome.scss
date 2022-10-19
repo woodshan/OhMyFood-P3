@@ -112,6 +112,7 @@
         height:100%;
         @include flexColumn;
         justify-content: space-between;
+        gap: 25px;
     }
 
     &__card {
@@ -134,6 +135,7 @@
     &__img {
         height: 180px;
         border-radius: 20px 20px 0 0;
+        width: 100%;
     }
     
     &__description {
@@ -160,7 +162,7 @@
     &__heart {
         position: absolute;
         right: 5%;
-        top: 30%;
+        bottom: 10%;
         font-size: 20px;
         cursor:pointer;
         transition: all 0.4s ease-out;

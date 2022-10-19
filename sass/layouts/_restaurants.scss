@@ -38,10 +38,14 @@
         background-color:white;
         position:absolute;
         width: 100%;
+        padding-bottom: 20px;
     }
 
     &__restaurant {
         @include container;
+        font-size: 25px;
+        font-family: 'Shrikhand';
+        font-weight: 100;
     }
 
     &__hearts {
@@ -56,14 +60,17 @@
     }
 
     &__heart {
-        position: absolute;
-        font-size: 30px;
+        @include container;
+        font-size: 25px;
         right: 5%;
-        top: 30px;
+        top: 32px;
         cursor:pointer;
         transition: all 0.4s ease-out;
         &--hover {
             color: $btn-heart;
+            position: absolute;
+            right:0.4px;
+            top: 26px;
         }
     }
 }
@@ -74,75 +81,56 @@
     @include container;
 
     &__title {
-
-        position:relative;
-        padding-bottom: 5px;
-        text-transform: uppercase;
-        font-weight: normal;
-        font-size: 20px;
-        margin-bottom: 0;
+        @include menuTitle;
         margin-top: 100px;
 
         &::before {
-            content:"";
-            height: 3px;
-            width: 45px;
-            background-color: $tertiaire;
-            position:absolute;
-            bottom: 0;
+            @include menuUnderline;
         }
     }
 
     &__card {
-        display:flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        padding: 0 0 0 15px;
-        @include boxShadowList;
-        @include borderRadius;
-        cursor: pointer;
-        overflow:hidden;
-        
-        
-        //-webkit-animation: slide-bottom 0.9s ;
-	    // animation: slide-bottom 0.9s ; 
+        @include menuCard;
  
         &:hover .starter__icon {
             margin-right:0;
-            
         }
 
         &:hover .starter__check {
             transform: rotate(360deg);
             margin-right:0;
         }
+
+        &--delay1 {
+            @include animFadedelay1;
+        }
+
+        &--delay2 {
+            @include animFadedelay2;
+        }
     }
 
     &__dish {
-        display:flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        width: 100%;
-        padding-right: 15px;
+        @include menuDish
     }
 
     &__menu {
         font-size: 20px;
         margin-bottom: 0;
-    }
-
-    &__price {
-        flex-shrink: 0;
-    }
-
-    &__description {
-        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
+
+    &__description {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
     &__details {
         margin-top: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__euros {
