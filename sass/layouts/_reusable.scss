@@ -1,11 +1,11 @@
 // PAGE LOADER
-// .loader {
-//     @include Pageloader;
+.loader {
+    @include Pageloader;
     
-//     &__content {
-//         @include loader;
-//   }
-// }
+    &__content {
+        @include loader;
+  }
+}
 // FOOTER
 .footer {
     background:$back-footer;
