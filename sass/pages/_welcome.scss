@@ -153,10 +153,6 @@
         position:relative;
         transition: transform 0.3s ease-in-out;
 
-        &:hover {
-            transform: scale(1.01);
-        }
-
         &--new::before {
             position: absolute;
             content: "Nouveau";
@@ -226,6 +222,11 @@
 }
 // DESKTOP
 @media screen and (min-width: $desktop) {
+    // PAGE LOADER
+    .loader__content {
+        width: 120px;
+        height:120px;
+    }
     // FUNCTIONING SECTION
     .functioning {
         
@@ -262,4 +263,3 @@
         }
     }
 }
-

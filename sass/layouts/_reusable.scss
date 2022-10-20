@@ -24,10 +24,3 @@
         margin-right: 5px;
     }
 }
-// MEDIA QUERIES TABLET & DESKTOP
-@media screen and (min-width: $desktop) {
-    .loader__content {
-        width: 120px;
-        height:120px;
-    }
-}

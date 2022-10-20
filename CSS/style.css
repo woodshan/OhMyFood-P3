@@ -63,12 +63,6 @@ img {
   margin-right: 5px;
 }
 
-@media screen and (min-width: 992px) {
-  .loader__content {
-    width: 120px;
-    height: 120px;
-  }
-}
 .loader {
   background-color: white;
   height: 100vh;
@@ -243,9 +237,6 @@ img {
   position: relative;
   transition: transform 0.3s ease-in-out;
 }
-.restaurant__card:hover {
-  transform: scale(1.01);
-}
 .restaurant__card--new::before {
   position: absolute;
   content: "Nouveau";
@@ -300,6 +291,10 @@ img {
   }
 }
 @media screen and (min-width: 992px) {
+  .loader__content {
+    width: 120px;
+    height: 120px;
+  }
   .functioning__container {
     flex-direction: row;
     align-items: center;
