@@ -40,6 +40,31 @@ img {
   object-fit: cover;
 }
 
+.loader {
+  background-color: white;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: wait;
+  animation: loader 3s linear;
+  visibility: hidden;
+}
+.loader__content {
+  border: 16px solid #9356DC;
+  border-top: 16px solid #FF79DA;
+  border-left: 16px solid #99E2D0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 3s linear;
+  visibility: hidden;
+  position: fixed;
+}
+
 .footer {
   background: rgb(70, 70, 70);
   height: 100%;
