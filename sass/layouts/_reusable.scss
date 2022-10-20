@@ -1,15 +1,15 @@
 // PAGE LOADER
-.loader {
-    @include Pageloader;
+// .loader {
+//     @include Pageloader;
     
-    &__content {
-        @include loader;
-  }
-}
+//     &__content {
+//         @include loader;
+//   }
+// }
 // FOOTER
 .footer {
-    background:rgb(70, 70, 70);
-    height:100%;
+    background:$back-footer;
+    height:$max;
     
     &__container {
         @include container;
@@ -32,8 +32,8 @@
         margin-right: 5px;
     }
 }
-// MEDIA QUERIES TABLETTE 
-@media screen and (min-width:992px) {
+// MEDIA QUERIES TABLET & DESKTOP
+@media screen and (min-width: $desktop) {
     .loader__content {
         width: 120px;
         height:120px;

@@ -22,21 +22,21 @@
 
     &__text {
     margin-left: 10px;
-    font-weight: bold;
+    font-weight: $bold;
     }
     
     
     &__container {
         @include flexColumn;
         align-items: center;
-        @include background;
+        background-color:$back-white;
         @include container;
         padding-top: 20px;
         padding-bottom: 50px;
     }
 
     &__title {
-        font-weight: 600;
+        font-weight: $bold;
     }
 
     &__button {
@@ -45,8 +45,8 @@
     transition: all 0.2s ease-in-out;
 
     &:hover {
-        background: linear-gradient(#ff79d9f4, #9256dcf2);
-        box-shadow: 0px 0px 17px 3px rgba(0,0,0,0.24);
+        background: linear-gradient(#ff79d9f4, #ab65fff2);
+        box-shadow: 0px 0px 17px 5px rgba(0,0,0,0.24);
     }
     }
 }
@@ -80,11 +80,11 @@
     counter-increment: steps;
     transition: all 0.4s;
     
-        &:active {
-            background:rgb(255, 243, 255);
+        &:hover {
+            background:$back-functioning;
         }
 
-        &:active .icon-list{
+        &:hover .icon-list{
             color:$primary;
         }
     }
@@ -93,7 +93,7 @@
     display:flex;
     align-items: center;
     gap: 10px;
-    font-weight:700;
+    font-weight:$bold;
 
         &::before {
             content:"" counter(steps);
@@ -114,9 +114,8 @@
 } 
 // RESTAURANT SECTION
 .restaurant{   
-    @include background;
+    background-color: $back-white;
     @include container;
-    height: 1180px;
     padding-bottom: 60px;
     padding-top: 15px;
 
@@ -132,10 +131,10 @@
     }
 
     &--separator {
-        height:100%;
-        @include flexColumn;
+        height:$max;
+        @extend .restaurant__container;
         justify-content: space-between;
-        gap: 25px;
+        height:auto;
     }
 
     &__card {
@@ -154,17 +153,17 @@
             content: "Nouveau";
             padding: 5px 10px;
             background-color: $tertiaire;
-            color: #048c68;
+            color: $new;
             right: 3%;
             top: 5%;
-            font-weight: 600;
+            font-weight: $bold;
         }
     }
     
     &__img {
         height: 180px;
         border-radius: 20px 20px 0 0;
-        width: 100%;
+        width: $max;
     }
     
     &__description {
@@ -192,7 +191,7 @@
         position: absolute;
         right: 5%;
         bottom: 10%;
-        font-size: 25px;
+        font-size: $font-title;
         cursor:pointer;
         transition: all 0.4s ease-out;
 
@@ -203,8 +202,8 @@
     }
 }
 
-// TABLETTE
-@media screen and (min-width: 768px) {
+// TABLET
+@media screen and (min-width: $tablet) {
     // FOOTER
     .footer { 
         
@@ -217,7 +216,7 @@
     }
 }
 // DESKTOP
-@media screen and (min-width: 992px) {
+@media screen and (min-width: $desktop) {
     // FUNCTIONING SECTION
     .functioning {
         
