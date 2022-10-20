@@ -1,3 +1,12 @@
+// PAGE LOADER
+.loader {
+    @include Pageloader;
+    
+    &__content {
+        @include loader;
+  }
+}
+
 // HEADER
 .header {
     @include flexMid;
