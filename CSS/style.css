@@ -65,16 +65,6 @@ img {
   position: fixed;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 15px;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.204);
-}
-.header__logo {
-  width: 200px;
-}
-
 .footer {
   background: rgb(70, 70, 70);
   height: 100%;
@@ -104,6 +94,16 @@ img {
     height: 120px;
   }
 }
+.header {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.204);
+}
+.header__logo {
+  width: 200px;
+}
+
 .research__location {
   display: flex;
   justify-content: center;
@@ -272,21 +272,21 @@ img {
   margin: 0;
   padding: 3px;
 }
-.restaurant__hearts:active > .restaurant__heart--hover {
+.restaurant__hearts:hover > .restaurant__heart--hover {
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
 }
-.restaurant__hearts:active > .restaurant__heart--btn {
+.restaurant__hearts:hover > .restaurant__heart--btn {
   color: rgba(146, 86, 220, 0);
 }
 .restaurant__heart {
   position: absolute;
   right: 5%;
   bottom: 10%;
-  font-size: 20px;
+  font-size: 25px;
   cursor: pointer;
   transition: all 0.4s ease-out;
 }
@@ -330,13 +330,6 @@ img {
     width: 269.97px;
   }
 }
-span {
-  color: #9356DC;
-  font-family: "Shrikhand";
-  margin-top: 180px;
-  font-size: 20px;
-}
-
 .headers {
   display: flex;
   align-items: center;
@@ -401,6 +394,12 @@ span {
   position: absolute;
   right: 0.4px;
   top: 26px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .starter, .dessert, .dish {
@@ -548,6 +547,12 @@ span {
   .menu__restaurant {
     font-size: 30px;
   }
+  .menu__heart {
+    margin-right: 10px;
+  }
+  .menu__heart--hover {
+    top: 34px;
+  }
   .order__button {
     width: 20%;
   }
@@ -555,15 +560,37 @@ span {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 992px) {
-  .starter__card, .dish__card, .dessert__card {
-    width: 80%;
-    margin: auto;
+@media screen and (min-width: 1072px) {
+  .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .starter, .dish, .dessert {
+    width: 100%;
+    padding: 0px;
   }
   .starter__title, .dish__title, .dessert__title {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 15px;
+  }
+  .starter__card, .dish__card, .dessert__card {
+    width: 90%;
+    margin: auto;
+  }
+  .dish, .dessert {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .dessert__card, .dish__card {
+    width: 90%;
+  }
+  .dish__card--modif, .dessert__card--modif {
+    margin: 0 auto;
+  }
+  .dessert--desktop {
+    align-items: center;
   }
   .order__button {
     width: 15%;

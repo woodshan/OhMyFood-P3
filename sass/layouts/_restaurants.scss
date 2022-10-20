@@ -72,6 +72,13 @@
         }
     }
 }
+
+// WRAPPER
+.wrapper {
+    @include flexColumn;
+    gap:20px;
+}
+
 // STARTER
 .starter {
     @include menuDisplay;
@@ -284,6 +291,13 @@
         &__restaurant {
             font-size: 30px;
         }
+
+        &__heart {
+            margin-right: 10px;
+            &--hover  {
+                top: 34px;
+            }
+        }
     }
 
     .order {
@@ -298,18 +312,40 @@
 }
 
 // MEDIA QUERIES DESKTOP
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1072px) {
+    .wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
     .starter {
+        width:100%;
+        padding: 0px;
+
+        &__title {
+            padding-left: 15px;
+        }
+
         &__card {
-            width: 80%;
+            width: 90%;
             margin: auto;
         }
 
-        &__title {
-            width: 85%;
-            margin-left: auto;
-            margin-right:auto;
-        }
+    }
+    .dish, .dessert {
+        margin-top:50px;
+        width: 100%;
+    }
+    .dessert__card, .dish__card {
+        width: 90%;
+    }
+    .dish__card--modif, .dessert__card--modif {
+        margin:0 auto;
+    }
+    .dessert--desktop {
+        align-items: center;
     }
     .order {
         &__button {

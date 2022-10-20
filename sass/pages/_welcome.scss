@@ -1,3 +1,15 @@
+// HEADER
+.header {
+    @include flexMid;
+    padding-bottom: 15px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.204);
+
+    &__logo {
+        width: 200px;
+    }
+}
+
+// RESEARCH SECTION
 .research {
     &__location {
         @include flexMiddle;
@@ -37,8 +49,9 @@
         box-shadow: 0px 0px 17px 3px rgba(0,0,0,0.24);
     }
     }
-    
 }
+
+// FUNCTIONING SECTION
 .functioning {
     @include flexMid;
     flex-direction: column;
@@ -166,11 +179,11 @@
 
     &__hearts {
 
-        &:active > .restaurant__heart--hover{
+        &:hover > .restaurant__heart--hover{
             @include animHeart;
         }
 
-        &:active > .restaurant__heart--btn {
+        &:hover > .restaurant__heart--btn {
             color:$btn-heart;
         }
     }
@@ -179,7 +192,7 @@
         position: absolute;
         right: 5%;
         bottom: 10%;
-        font-size: 20px;
+        font-size: 25px;
         cursor:pointer;
         transition: all 0.4s ease-out;
 
@@ -189,6 +202,7 @@
 
     }
 }
+
 // TABLETTE
 @media screen and (min-width: 768px) {
     // FOOTER
@@ -241,9 +255,3 @@
     }
 }
 
-span {
-    color:$primary;
-    font-family: "Shrikhand";
-    margin-top: 180px;
-    font-size: 20px;
-}

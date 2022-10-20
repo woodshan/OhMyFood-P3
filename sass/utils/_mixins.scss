@@ -1,3 +1,4 @@
+// DISPLAY FLEX
 @mixin flexMid {
     display:flex;
     justify-content: center;
@@ -38,6 +39,7 @@
 @mixin container {
     padding: 0 20px;
 }
+// ANIMATIONS
 @mixin animHeart {
     -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
